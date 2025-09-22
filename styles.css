@@ -4,10 +4,48 @@ body, h1, h2, p, ul, li {
     box-sizing: border-box;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+#about, #projects, #contact {
+    max-width: 2000px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+body {
+    background: linear-gradient(to bottom, #FC9A64 0%,#7B515F  100%);
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+header {
+    background: #FDE0B8;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 header nav {
@@ -16,6 +54,34 @@ header nav {
     justify-content: space-between;
     gap: 2rem;
     padding: 0 2rem;
+}
+#contact .contact-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#contact .contact-buttons button {
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+#contact .contact-buttons img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+html {
+    scroll-behavior: smooth;
+}
+#contact .contact-buttons div {
+    margin-top: 0.5rem;
 }
 
 header nav img {
@@ -41,7 +107,7 @@ header nav ul li:last-child {
 }
 
 header nav a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
@@ -49,7 +115,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #00aaff;
+    color: #FC9A64;
 }
 
 .logo-placeholder {
@@ -64,25 +130,6 @@ header nav a:hover {
     color: #222;
     font-size: 1.5rem;
 }
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f5f6fa;
-    color: #222;
-    line-height: 1.6;
-}
-
-header {
-    background: #222;
-    color: #fff;
-    padding: 2rem 0 1rem 0;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-}
 
 nav ul {
     list-style: none;
@@ -93,7 +140,7 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
+    color: #6bd5ff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
@@ -124,7 +171,7 @@ section h2 {
 }
 
 footer {
-    background: #222;
+    background: #23131E;
     color: #fff;
     text-align: center;
     padding: 1rem 0;

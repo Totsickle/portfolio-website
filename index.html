@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="profile.jpg" alt="Profile Image">
+            <img src="assets/ap..png" alt="Profile Image">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -18,20 +18,85 @@
         </nav>
     </header>
     <main>
-        <h1>Welcome to My Portfolio</h1>
-        <div style="display: flex; align-items: center; margin-bottom: 2rem;">
-            <img src="large-profile.jpg" alt="Large Profile" style="width: 350px; height: auto; border-radius: 10px; margin-right: 2rem;">
+        <h1 id="welcome1">Welcome to My Portfolio!</h1>
+        <div id="profile-carousel" style="display: flex; align-items: center; margin-bottom: 2rem;">
+            <div style="position: relative; width: 350px; height: 350px; margin-right: 2rem;">
+            <img id="carousel-image" src="assets/pfp.jpg" alt="Profile Carousel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; transition: opacity 0.7s;">
+            <button id="prev-btn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer;">&#8592;</button>
+            <button id="next-btn" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer;">&#8594;</button>
+            </div>
             <div>
-                <h2 style="margin: 0;">Aristotle Peteros</h2>
-                <p style="font-size: 1.2rem; margin: 0.5rem 0 0 0;">Graduating IT Student</p>
-                <p style="margin: 0;">Pamantasan ng Lungsod ng Valenzuela</p>
+            <h2 style="margin: 0;">Aristotle Peteros</h2>
+            <p style="font-size: 1.2rem; margin: 0.5rem 0 0 0;">Graduating IT Student</p>
+            <p style="margin: 0;">Pamantasan ng Lungsod ng Valenzuela</p>
             </div>
         </div>
+        <script>
+            const images = [
+            "assets/pfp.jpg",
+            "assets/pfp2.jpg",
+            "assets/pfp3.jpg",
+            "assets/pfp5.jpg",
+            "assets/pfp6.jpg",
+            "assets/pfp7.jpg",
+            // Add more image paths here
+            ];
+            let currentIndex = 0;
+            const carouselImage = document.getElementById('carousel-image');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            function showImage(index) {
+            carouselImage.style.opacity = 0;
+            setTimeout(() => {
+                carouselImage.src = images[index];
+                carouselImage.style.opacity = 1;
+            }, 350);
+            }
+
+            prevBtn.onclick = function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+            resetInterval();
+            };
+            nextBtn.onclick = function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+            resetInterval();
+            };
+
+            function nextAuto() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+            }
+
+            let autoInterval = setInterval(nextAuto, 5000);
+
+            function resetInterval() {
+            clearInterval(autoInterval);
+            autoInterval = setInterval(nextAuto, 5000);
+            }
+
+            // Initial opacity
+            carouselImage.style.opacity = 1;
+        </script>
         <section id="about">
             <h2>About Me</h2>
             <p>Hey! my name is Aristotle Peteros, an Information Technology Student from Pamantasan ng Lungsod ng Valenzuela.
                 I am currently in my 4th year of college and I am passionate about System and Network Administration as well as 
-                other multimedia work.
+                other multimedia work.</p>
+                <br>
+            <h2>Hobbies</h2>
+            <p>I have numerous hobbies I usually mess around with in my spare time or whenever I feel like it!
+                I have been playing the guitar for around 10 years now but I honestly still am not good at it haha
+                I really just like to mess around with it and play some songs I like. I also play a lot of video games
+                since majority of my childhood was around video games watching my titos and brother play Resident Evil
+                and fighting games. What stuck to me the most was playing FPS games like Counter Strike and an indie
+                game called Dota 2 (lol). I used to watch a lot of anime back then but now Im more of a manga reader
+                since I dont have much time to watch anime series. And now recntly I've been messing around with Blender3d.
+                I got really into this because of our Multimedia Arts subject I took in my 2nd year and my 3rd year and to
+                this day I still mess around with it and try to learn new things. I also like to do graphic design. I have
+                also recently started to workout and get into the ways on how to be healthy and fit.
             </p>
         </section>
         <section id="projects">
@@ -41,10 +106,24 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>Get in touch via email or social media.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
+            <a href="https://web.facebook.com/Aristotle.eXpress" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+                <img src="assets/fbiaw.png" alt="Facebook" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+                <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
+            </a>
+            <a href="mailto:aristotle.peteros@gmail.com" style="text-align: center; text-decoration: none; color: inherit;">
+                <img src="assets/4202011_email_gmail_mail_logo_social_icon.png" alt="Email" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+                <div style="margin-top: 0.5rem;">aristotle.peteros@gmail.com</div>
+            </a>
+            <a href="https://www.linkedin.com/in/aristotle-peteros-6796242b4" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+                <img src="assets/linkedin-icon-logo-png-transparent.png" alt="LinkedIn" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+                <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
+            </a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Aristotle Peteros</p>
+        <p>&copy; 2025 Aristotle Peteros</p>
     </footer>
 </body>
 </html>
