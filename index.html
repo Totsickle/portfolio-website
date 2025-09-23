@@ -88,15 +88,16 @@
                 <br>
             <h2>Hobbies</h2>
             <p>I have numerous hobbies I usually mess around with in my spare time or whenever I feel like it!
-                I have been playing the guitar for around 10 years now but I honestly still am not good at it haha
-                I really just like to mess around with it and play some songs I like. I also play a lot of video games
+                I have been <b><i>playing the guitar</i></b> for around 10 years now but I honestly still am not good at it haha
+                I really just like to mess around with it and play some songs I like. I also <b><i>play a lot of video games</i></b>
                 since majority of my childhood was around video games watching my titos and brother play Resident Evil
-                and fighting games. What stuck to me the most was playing FPS games like Counter Strike and an indie
-                game called Dota 2 (lol). I used to watch a lot of anime back then but now Im more of a manga reader
-                since I dont have much time to watch anime series. And now recntly I've been messing around with Blender3d.
+                and fighting games. What stuck to me the most was playing <b><i>FPS games</i></b> like Counter Strike and an indie
+                game called Dota 2 (lol). I used to <b><i>watch a lot of anime and movies</i></b> back then but now Im more of a manga reader
+                since I dont have much time to watch anime series. I like to watch classic movies and familiarize myself with
+                pop culture of the past that some are amusingly still around till this day. And now recntly I've been messing around with <i><b>Blender3d</i></b>.
                 I got really into this because of our Multimedia Arts subject I took in my 2nd year and my 3rd year and to
-                this day I still mess around with it and try to learn new things. I also like to do graphic design. I have
-                also recently started to workout and get into the ways on how to be healthy and fit.
+                this day I still mess around with it and try to learn new things. I also like to do <i><b>graphic design</i></b>. I have
+                also recently started to <i><b>workout</i></b> and get into the ways on how to be healthy and fit.
             </p>
         </section>
         <section id="skills">
@@ -198,7 +199,7 @@
         <!-- Modal for enlarged image (moved outside the section for full screen coverage) -->
         <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
             <span id="modal-close" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; font-weight:bold;z-index:10001;">&times;</span>
-            <div id="modal-img-container" style="display:flex; align-items:center; justify-content:center; width:100vw; height:100vh;"></div>
+            <div id="modal-img-container" style="display:flex; align-items:center; justify-content:center; width:100vw; height:100vh;">
                 <img id="modal-img" src="" alt="Enlarged Project" style="max-width:96vw; max-height:90vh; border-radius:12px; box-shadow:0 0 24px #000; display:block; margin:auto; z-index:10000;">
             </div>
         </div>
@@ -257,6 +258,7 @@
                 const modalImg = document.getElementById('modal-img');
                 modalImg.src = projectImages[idx][current];
                 modal.style.display = 'flex';
+                // Center the image (already handled by flex on #modal-img-container)
                 // Prevent background scroll when modal is open
                 document.body.style.overflow = 'hidden';
             });
