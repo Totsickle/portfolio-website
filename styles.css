@@ -12,7 +12,7 @@ h1 {
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
-#about, #projects, #contact {
+#about, #projects, #contact,#skills {
     max-width: 2000px;
     width: 90%;
     background: rgba(255, 255, 255, 0.7);
@@ -29,6 +29,9 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: #222;
     line-height: 1.6;
+}
+p {
+    text-align: justify;
 }
 header {
     background: #FDE0B8;

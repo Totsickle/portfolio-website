@@ -12,6 +12,7 @@
             <img src="assets/ap..png" alt="Profile Image">
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -39,7 +40,6 @@
             "assets/pfp5.jpg",
             "assets/pfp6.jpg",
             "assets/pfp7.jpg",
-            // Add more image paths here
             ];
             let currentIndex = 0;
             const carouselImage = document.getElementById('carousel-image');
@@ -99,13 +99,196 @@
                 also recently started to workout and get into the ways on how to be healthy and fit.
             </p>
         </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Throughout my 4 years in college I have garnered various IT related skills that I can use in the IT industry.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>System Administration</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Troubleshooting</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Graphic Design</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Blender 3D</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Web Development</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>C#</strong>
+            </div>
+             <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>SQL</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>Prompt Engineering</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>2d Pixel Animation and Design</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>MySQL</strong>
+            </div>
+            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
+                <strong>MSSQL</strong>
+            </div>
+        </section>
         <section id="projects">
             <h2>Projects</h2>
-            <p>Here are some of my recent works.</p>
+            <p>These are the projects that I have had the pleasure of working on with my classmates and some for personal agendas!</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <!-- Project 1 -->
+                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
+                    <h2>ZzomBang</h2>
+                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
+                        <img class="project-image" src="assets/ZzomBang/zombai.jpg" alt="Project 1" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
+                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
+                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+                    </div>
+                    <p style="margin-top: 1rem;">ZzomBang is a game I developed with my friends for our game development subject. I really 
+                    enjoyed working on this project as it was my first time working with Unity2d and it enlightened me on how important
+                    teamwork is when it comes to game development. I contributed heavily on this project acting as the main programmer and
+                    also helped with some of the game design and concept art.
+                    </p>
+                </div>
+                <!-- Project 2 -->
+                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
+                    <h2>TrafficSlight</h2>
+                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
+                        <img class="project-image" src="assets/TrafficSlight/1.png" alt="Project 2" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
+                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
+                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+                    </div>
+                    <p style="margin-top: 1rem;">TrafficSlight is our capstone project we started on our 2nd semester of our 3rd year. My role in this project was to be the Design lead and I mainly
+                    worked on the UI/UX design of the application. I worked a lot on the wireframes and mockups of the application as well as the logo design. I worked on creating prototypes with 
+                    Figma and helped give feedback on the overall design of the application. This project is still ongoing and we are currently still polishing the application.
+                    </p>
+                </div>
+                <!-- Project 3 -->
+                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
+                    <h2>GigaBites</h2>
+                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
+                        <img class="project-image" src="assets/GigaBites/GigaBites.jpg" alt="Project 3" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
+                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
+                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+                    </div>
+                    <p style="margin-top: 1rem;">GigaBites is a food recipe sharing website we created for our Software Development subject. I was tasked with QA testing for the system and learned a lot
+                    about proper documentation and its importance when it comes to software development.
+                    </p>
+                </div>
+                <!-- Project 4 -->
+                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
+                    <h2>The World of Murendil</h2>
+                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
+                        <img class="project-image" src="assets/Murendil/Murendil.png" alt="Project 4" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
+                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
+                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+                    </div>
+                    <p style="margin-top: 1rem;">This was also a game I developed but now I worked as the 2nd developer and I was tasked to create the
+                    logic and mechanics of the fighting system. I learned a lot from this project and a lot more about how important managing different
+                    files when weking with another developer. I also learned that communication is key when working with other people.
+                    </p>
+                </div>
+            </div>
         </section>
+        <!-- Modal for enlarged image (moved outside the section for full screen coverage) -->
+        <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+            <span id="modal-close" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; font-weight:bold;z-index:10001;">&times;</span>
+            <div id="modal-img-container" style="display:flex; align-items:center; justify-content:center; width:100vw; height:100vh;"></div>
+                <img id="modal-img" src="" alt="Enlarged Project" style="max-width:96vw; max-height:90vh; border-radius:12px; box-shadow:0 0 24px #000; display:block; margin:auto; z-index:10000;">
+            </div>
+        </div>
+        <script>
+        // Images for each project carousel
+        const projectImages = [
+            ["assets/ZzomBang/zombai.jpg", "assets/ZzomBang/zombai2.jpg", "assets/ZzomBang/zombai3.jpg", "assets/ZzomBang/zombai4.jpg"], // ZzomBang
+            ["assets/TrafficSlight/1.png", "assets/TrafficSlight/2.png"], // TrafficSlight
+            ["assets/GigaBites/GigaBites.jpg", "assets/GigaBites/GigaBites2.jpg"], // GigaBites
+            ["assets/Murendil/Murendil.png", "assets/Murendil/Murendil2.jpg"]  // Murendil
+        ];
+
+        // Initialize carousels
+        document.querySelectorAll('.project-carousel').forEach((carousel, idx) => {
+            const img = carousel.querySelector('.project-image');
+            const prev = carousel.querySelector('.project-prev');
+            const next = carousel.querySelector('.project-next');
+            let current = 0;
+
+            function showProjectImage(i) {
+                img.style.opacity = 0;
+                setTimeout(() => {
+                    img.src = projectImages[idx][i];
+                    img.style.opacity = 1;
+                }, 350);
+            }
+
+            prev.onclick = function() {
+                current = (current - 1 + projectImages[idx].length) % projectImages[idx].length;
+                showProjectImage(current);
+                resetProjectInterval();
+            };
+            next.onclick = function() {
+                current = (current + 1) % projectImages[idx].length;
+                showProjectImage(current);
+                resetProjectInterval();
+            };
+
+            function nextProjectAuto() {
+                current = (current + 1) % projectImages[idx].length;
+                showProjectImage(current);
+            }
+
+            let projectInterval = setInterval(nextProjectAuto, 5000);
+
+            function resetProjectInterval() {
+                clearInterval(projectInterval);
+                projectInterval = setInterval(nextProjectAuto, 5000);
+            }
+
+            img.style.opacity = 1;
+
+            // Enlarge image on click
+            img.addEventListener('click', function() {
+                const modal = document.getElementById('img-modal');
+                const modalImg = document.getElementById('modal-img');
+                modalImg.src = projectImages[idx][current];
+                modal.style.display = 'flex';
+                // Prevent background scroll when modal is open
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Modal close logic
+        function closeModal() {
+            document.getElementById('img-modal').style.display = 'none';
+            document.getElementById('modal-img').src = '';
+            document.body.style.overflow = '';
+        }
+        document.getElementById('modal-close').onclick = closeModal;
+        // Close modal when clicking outside the image
+        document.getElementById('img-modal').addEventListener('click', function(e) {
+            // Only close if clicking the background, not the image or container
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('img-modal');
+                if (modal.style.display === 'flex') {
+                    closeModal();
+                }
+            }
+        });
+        </script>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Get in touch via email or social media.</p>
+            <p>Get in touch with me! I would genuinely just love to interact with other people It's like just me trying to improve my social skills, so lets connect!</p>
             <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
             <a href="https://web.facebook.com/Aristotle.eXpress" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
                 <img src="assets/fbiaw.png" alt="Facebook" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
