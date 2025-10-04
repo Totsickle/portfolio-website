@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="animated-bg">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
     <header>
         <nav>
             <img src="assets/LogoAWEdited.png" alt="Profile Image" style="height: 64px; width: auto;">
@@ -77,7 +89,6 @@
             autoInterval = setInterval(nextAuto, 5000);
             }
 
-            // Initial opacity
             carouselImage.style.opacity = 1;
         </script>
         <section id="about">
@@ -100,103 +111,242 @@
                 also recently started to <i><b>workout</i></b> and get into the ways on how to be healthy and fit.
             </p>
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Throughout my 4 years in college I have garnered various IT related skills that I can use in the IT industry.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>System Administration</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>Troubleshooting</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>Graphic Design</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>Blender 3D</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>Web Development</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>C#</strong>
-            </div>
-             <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>SQL</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>Prompt Engineering</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>2d Pixel Animation and Design</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>MySQL</strong>
-            </div>
-            <div style="background: #FDE0B8; padding: 1rem; border-radius: 8px; text-align: center;">
-                <strong>MSSQL</strong>
-            </div>
-        </section>
+       <section id="skills">
+    <h2>Skills</h2>
+    <p>Throughout my 4 years in college I have garnered various IT related skills that I can use in the IT industry.</p>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <strong>System Administration</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <strong>Troubleshooting</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🎨</div>
+            <strong>Graphic Design</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🎭</div>
+            <strong>Blender 3D</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <strong>Web Development</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🔷</div>
+            <strong>C#</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🗃️</div>
+            <strong>SQL</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <strong>Prompt Engineering</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🎮</div>
+            <strong>2D Pixel Animation and Design</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🐬</div>
+            <strong>MySQL</strong>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">📊</div>
+            <strong>MSSQL</strong>
+        </div>
+    </div>
+</section>
+
+<style>
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #C4E1E6 0%, #A4CCD9 100%);
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.skill-card:hover::before {
+    left: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(141, 188, 199, 0.4);
+    background: linear-gradient(135deg, #EBFFD8 0%, #C4E1E6 100%);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.skill-card strong {
+    display: block;
+    color: #2c5a66;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+</style>
         <section id="projects">
             <h2>Projects</h2>
             <p>These are the projects that I have had the pleasure of working on with my classmates and some for personal agendas!</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                <!-- Project 1 -->
-                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
-                    <h2>ZzomBang</h2>
-                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
-                        <img class="project-image" src="assets/ZzomBang/zombai.jpg" alt="Project 1" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
-                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
-                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+            
+            <!-- Filter buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="game">Game Development</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: ZzomBang -->
+                <div class="project-card" data-category="game" data-status="completed" data-date="2023">
+                    <div class="project-status-badge completed">Completed</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/ZzomBang/zombai.jpg" alt="ZzomBang Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/4</div>
                     </div>
-                    <p style="margin-top: 1rem;">ZzomBang is a game I developed with my friends for our game development subject. I really 
-                    enjoyed working on this project as it was my first time working with Unity2d and it enlightened me on how important
-                    teamwork is when it comes to game development. I contributed heavily on this project acting as the main programmer and
-                    also helped with some of the game design and concept art.
-                    </p>
+                    <div class="project-content">
+                        <h3>ZzomBang</h3>
+                        <div class="project-timeline">📅 2023</div>
+                        <p class="project-short-desc">A 2D zombie survival game developed with Unity</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity2D</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Game Design</span>
+                        </div>
+                        <button class="expand-btn">Read More</button>
+                        <div class="project-details">
+                            <p>ZzomBang is a game I developed with my friends for our game development subject. I really 
+                            enjoyed working on this project as it was my first time working with Unity2D and it enlightened me on how important
+                            teamwork is when it comes to game development. I contributed heavily on this project acting as the main programmer and
+                            also helped with some of the game design and concept art.</p>
+                            <div class="project-role"><strong>My Role:</strong> Main Programmer, Game Designer</div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Project 2 -->
-                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
-                    <h2>TrafficSlight</h2>
-                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
-                        <img class="project-image" src="assets/TrafficSlight/1.png" alt="Project 2" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
-                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
-                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+
+                <!-- Project 2: TrafficSlight -->
+                <div class="project-card" data-category="web design" data-status="in-progress" data-date="2024">
+                    <div class="project-status-badge in-progress">In Progress</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/TrafficSlight/1.png" alt="TrafficSlight Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/2</div>
                     </div>
-                    <p style="margin-top: 1rem;">TrafficSlight is our capstone project we started on our 2nd semester of our 3rd year. My role in this project was to be the Design lead and I mainly
-                    worked on the UI/UX design of the application. I worked a lot on the wireframes and mockups of the application as well as the logo design. I worked on creating prototypes with 
-                    Figma and helped give feedback on the overall design of the application. This project is still ongoing and we are currently still polishing the application.
-                    </p>
+                    <div class="project-content">
+                        <h3>TrafficSlight</h3>
+                        <div class="project-timeline">📅 2024 - Present</div>
+                        <p class="project-short-desc">Capstone project - Traffic management application</p>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design Lead</span>
+                        </div>
+                        <button class="expand-btn">Read More</button>
+                        <div class="project-details">
+                            <p>TrafficSlight is our capstone project we started on our 2nd semester of our 3rd year. My role in this project was to be the Design lead and I mainly
+                            worked on the UI/UX design of the application. I worked a lot on the wireframes and mockups of the application as well as the logo design. I worked on creating prototypes with 
+                            Figma and helped give feedback on the overall design of the application. This project is still ongoing and we are currently still polishing the application.</p>
+                            <div class="project-role"><strong>My Role:</strong> Design Lead, UI/UX Designer</div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Project 3 -->
-                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
-                    <h2>GigaBites</h2>
-                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
-                        <img class="project-image" src="assets/GigaBites/GigaBites.jpg" alt="Project 3" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
-                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
-                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+
+                <!-- Project 3: GigaBites -->
+                <div class="project-card" data-category="web" data-status="completed" data-date="2023">
+                    <div class="project-status-badge completed">Completed</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/GigaBites/GigaBites.jpg" alt="GigaBites Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/2</div>
                     </div>
-                    <p style="margin-top: 1rem;">GigaBites is a food recipe sharing website we created for our Software Development subject. I was tasked with QA testing for the system and learned a lot
-                    about proper documentation and its importance when it comes to software development.
-                    </p>
+                    <div class="project-content">
+                        <h3>GigaBites</h3>
+                        <div class="project-timeline">📅 2023</div>
+                        <p class="project-short-desc">Food recipe sharing web platform</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Development</span>
+                            <span class="tag">QA Testing</span>
+                            <span class="tag">Documentation</span>
+                        </div>
+                        <button class="expand-btn">Read More</button>
+                        <div class="project-details">
+                            <p>GigaBites is a food recipe sharing website we created for our Software Development subject. I was tasked with QA testing for the system and learned a lot
+                            about proper documentation and its importance when it comes to software development.</p>
+                            <div class="project-role"><strong>My Role:</strong> QA Tester, Documentation</div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Project 4 -->
-                <div style="background: #FDE0B8; border-radius: 10px; padding: 1rem; text-align: center;">
-                    <h2>The World of Murendil</h2>
-                    <div class="project-carousel" style="position: relative; width: 100%; height: 160px; margin-bottom: 1rem;">
-                        <img class="project-image" src="assets/Murendil/Murendil.png" alt="Project 4" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; transition: opacity 0.7s; cursor: pointer;">
-                        <button class="project-prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8592;</button>
-                        <button class="project-next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; cursor: pointer;">&#8594;</button>
+
+                <!-- Project 4: The World of Murendil -->
+                <div class="project-card" data-category="game" data-status="completed" data-date="2023">
+                    <div class="project-status-badge completed">Completed</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/Murendil/Murendil.png" alt="Murendil Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/2</div>
                     </div>
-                    <p style="margin-top: 1rem;">This was also a game I developed but now I worked as the 2nd developer and I was tasked to create the
-                    logic and mechanics of the fighting system. I learned a lot from this project and a lot more about how important managing different
-                    files when weking with another developer. I also learned that communication is key when working with other people.
-                    </p>
+                    <div class="project-content">
+                        <h3>The World of Murendil</h3>
+                        <div class="project-timeline">📅 2023</div>
+                        <p class="project-short-desc">RPG game with combat system mechanics</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Combat System</span>
+                        </div>
+                        <button class="expand-btn">Read More</button>
+                        <div class="project-details">
+                            <p>This was also a game I developed but now I worked as the 2nd developer and I was tasked to create the
+                            logic and mechanics of the fighting system. I learned a lot from this project and a lot more about how important managing different
+                            files when working with another developer. I also learned that communication is key when working with other people.</p>
+                            <div class="project-role"><strong>My Role:</strong> 2nd Developer, Combat System Designer</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Modal for enlarged image (moved outside the section for full screen coverage) -->
+        <!-- Modal for enlarged image -->
         <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
             <span id="modal-close" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; font-weight:bold;z-index:10001;">&times;</span>
             <div id="modal-img-container" style="display:flex; align-items:center; justify-content:center; width:100vw; height:100vh;">
@@ -206,33 +356,41 @@
         <script>
         // Images for each project carousel
         const projectImages = [
-            ["assets/ZzomBang/zombai.jpg", "assets/ZzomBang/zombai2.jpg", "assets/ZzomBang/zombai3.jpg", "assets/ZzomBang/zombai4.jpg"], // ZzomBang
-            ["assets/TrafficSlight/1.png", "assets/TrafficSlight/2.png"], // TrafficSlight
-            ["assets/GigaBites/GigaBites.jpg", "assets/GigaBites/GigaBites2.jpg"], // GigaBites
-            ["assets/Murendil/Murendil.png", "assets/Murendil/Murendil2.jpg"]  // Murendil
+            ["assets/ZzomBang/zombai.jpg", "assets/ZzomBang/zombai2.jpg", "assets/ZzomBang/zombai3.jpg", "assets/ZzomBang/zombai4.jpg"],
+            ["assets/TrafficSlight/1.png", "assets/TrafficSlight/2.png"],
+            ["assets/GigaBites/GigaBites.jpg", "assets/GigaBites/GigaBites2.jpg"],
+            ["assets/Murendil/Murendil.png", "assets/Murendil/Murendil2.jpg"]
         ];
 
-        // Initialize carousels
-        document.querySelectorAll('.project-carousel').forEach((carousel, idx) => {
-            const img = carousel.querySelector('.project-image');
-            const prev = carousel.querySelector('.project-prev');
-            const next = carousel.querySelector('.project-next');
+        // Initialize project carousels
+        document.querySelectorAll('.project-card').forEach((card, idx) => {
+            const img = card.querySelector('.project-image');
+            const prev = card.querySelector('.project-prev');
+            const next = card.querySelector('.project-next');
+            const counter = card.querySelector('.project-image-counter');
             let current = 0;
+
+            function updateCounter() {
+                counter.textContent = `${current + 1}/${projectImages[idx].length}`;
+            }
 
             function showProjectImage(i) {
                 img.style.opacity = 0;
                 setTimeout(() => {
                     img.src = projectImages[idx][i];
                     img.style.opacity = 1;
+                    updateCounter();
                 }, 350);
             }
 
-            prev.onclick = function() {
+            prev.onclick = function(e) {
+                e.stopPropagation();
                 current = (current - 1 + projectImages[idx].length) % projectImages[idx].length;
                 showProjectImage(current);
                 resetProjectInterval();
             };
-            next.onclick = function() {
+            next.onclick = function(e) {
+                e.stopPropagation();
                 current = (current + 1) % projectImages[idx].length;
                 showProjectImage(current);
                 resetProjectInterval();
@@ -251,16 +409,56 @@
             }
 
             img.style.opacity = 1;
+            updateCounter();
 
             // Enlarge image on click
-            img.addEventListener('click', function() {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
                 const modal = document.getElementById('img-modal');
                 const modalImg = document.getElementById('modal-img');
                 modalImg.src = projectImages[idx][current];
                 modal.style.display = 'flex';
-                // Center the image (already handled by flex on #modal-img-container)
-                // Prevent background scroll when modal is open
                 document.body.style.overflow = 'hidden';
+            });
+
+            // Expand/collapse project details
+            const expandBtn = card.querySelector('.expand-btn');
+            const details = card.querySelector('.project-details');
+            expandBtn.onclick = function() {
+                details.classList.toggle('expanded');
+                expandBtn.textContent = details.classList.contains('expanded') ? 'Show Less' : 'Read More';
+                card.classList.toggle('expanded');
+            };
+        });
+
+        // Project filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category.includes(filter)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
             });
         });
 
@@ -271,14 +469,11 @@
             document.body.style.overflow = '';
         }
         document.getElementById('modal-close').onclick = closeModal;
-        // Close modal when clicking outside the image
         document.getElementById('img-modal').addEventListener('click', function(e) {
-            // Only close if clicking the background, not the image or container
             if (e.target === this) {
                 closeModal();
             }
         });
-        // Close modal with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 const modal = document.getElementById('img-modal');
