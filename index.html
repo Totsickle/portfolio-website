@@ -21,7 +21,7 @@
     </div>
     <header>
         <nav>
-            <img src="assets/LogoAWEdited.png" alt="Profile Image" style="height: 64px; width: auto;">
+            <img src="assets/ap-edited.png" alt="Profile Image" style="height: 64px; width: auto;">
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -41,7 +41,7 @@
     <div class="mobile-side-menu" id="mobileSideMenu">
         <div class="mobile-menu-header">
             <img src="assets/LogoAWEdited.png" alt="Profile Image" style="height: 48px; width: auto;">
-            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close Menu">&times;</button>
+            <button class="mobile-menu-close" id="closeMobileMenuBtn" aria-label="Close Menu">&times;</button>
         </div>
         <ul class="mobile-menu-list">
             <li><a href="#about" class="mobile-menu-link">About</a></li>
@@ -56,7 +56,7 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileSideMenu = document.getElementById('mobileSideMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
         
         function openMobileMenu() {
@@ -74,7 +74,7 @@
         }
         
         mobileMenuBtn.addEventListener('click', openMobileMenu);
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
         mobileMenuOverlay.addEventListener('click', closeMobileMenu);
         
         // Close menu when clicking on a link
@@ -83,7 +83,7 @@
         });
         
         // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
+        document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && mobileSideMenu.classList.contains('active')) {
                 closeMobileMenu();
             }
@@ -346,7 +346,7 @@
 
             <div class="projects-grid">
                 <!-- Project 1: ZzomBang -->
-                <div class="project-card" data-category="game" data-status="completed" data-date="2024">
+                <div class="project-card" data-category="game" data-status="completed" data-date="2023">
                     <div class="project-status-badge completed">Completed</div>
                     <div class="project-carousel-wrapper">
                         <img class="project-image" src="assets/ZzomBang/zombai.jpg" alt="ZzomBang Project">
@@ -356,7 +356,7 @@
                     </div>
                     <div class="project-content">
                         <h3>ZzomBang</h3>
-                        <div class="project-timeline">📅 2024</div>
+                        <div class="project-timeline">📅 2023</div>
                         <p class="project-short-desc">A 2D zombie survival game developed with Unity</p>
                         <div class="project-tags">
                             <span class="tag">Unity2D</span>
@@ -403,7 +403,7 @@
                 </div>
 
                 <!-- Project 3: GigaBites -->
-                <div class="project-card" data-category="web" data-status="completed" data-date="2025">
+                <div class="project-card" data-category="web" data-status="completed" data-date="2023">
                     <div class="project-status-badge completed">Completed</div>
                     <div class="project-carousel-wrapper">
                         <img class="project-image" src="assets/GigaBites/GigaBites.jpg" alt="GigaBites Project">
@@ -413,7 +413,7 @@
                     </div>
                     <div class="project-content">
                         <h3>GigaBites</h3>
-                        <div class="project-timeline">📅 2025</div>
+                        <div class="project-timeline">📅 2023</div>
                         <p class="project-short-desc">Food recipe sharing web platform</p>
                         <div class="project-tags">
                             <span class="tag">Web Development</span>
@@ -430,7 +430,7 @@
                 </div>
 
                 <!-- Project 4: The World of Murendil -->
-                <div class="project-card" data-category="game" data-status="completed" data-date="2025">
+                <div class="project-card" data-category="game" data-status="completed" data-date="2023">
                     <div class="project-status-badge completed">Completed</div>
                     <div class="project-carousel-wrapper">
                         <img class="project-image" src="assets/Murendil/Murendil.png" alt="Murendil Project">
@@ -440,7 +440,7 @@
                     </div>
                     <div class="project-content">
                         <h3>The World of Murendil</h3>
-                        <div class="project-timeline">📅 2025</div>
+                        <div class="project-timeline">📅 2023</div>
                         <p class="project-short-desc">RPG game with combat system mechanics</p>
                         <div class="project-tags">
                             <span class="tag">Unity</span>
@@ -456,67 +456,68 @@
                         </div>
                     </div>
                 </div>
-                <!-- Project 5: ShawarmaSTOP Branding -->
-                    <div class="project-card" data-category="multimedia" data-status="completed" data-date="2024">
-                        <div class="project-status-badge completed">Completed</div>
-                        <div class="project-carousel-wrapper">
-                            <img class="project-image" src="assets/ShawarmaSTOP/highlight-view.png" alt="ShawarmaSTOP Project">
-                            <button class="project-prev">&#8592;</button>
-                            <button class="project-next">&#8594;</button>
-                            <div class="project-image-counter">1/2</div>
-                        </div>
-                        <div class="project-content">
-                            <h3>ShawarmaSTOP</h3>
-                            <div class="project-timeline">📅 2024</div>
-                            <p class="project-short-desc">3D Food Stall Made with Blender3D</p>
-                            <div class="project-tags">
-                                <span class="tag">Blender3D</span>
-                                <span class="tag">Canva</span>
+
+                <!-- Project 5: ShawarmaSTOP -->
+                <div class="project-card" data-category="multimedia" data-status="completed" data-date="2024">
+                    <div class="project-status-badge completed">Completed</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/ShawarmaSTOP/front-view.png" alt="ShawarmaSTOP Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/4</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ShawarmaSTOP</h3>
+                        <div class="project-timeline">📅 2024</div>
+                        <p class="project-short-desc">Shawarma Food Stall</p>
+                        <div class="project-tags">
+                            <span class="tag">Blender3d</span>
+                            <span class="tag">Canva</span>
                         </div>
                         <button class="expand-btn">Read More</button>
                         <div class="project-details">
-                            <p>This was a requirement in our Multimedia Arts II Subject, We were tasked with creating
-                            a 3D model of a food stall and I chose to make a Shawarma Stall since I really like eating shawarma and middle eastern food.
-                            I learned a lot about Blender3D and its capabilities when it comes to 3D modeling and rendering. I also learned a lot about lighting and texturing
-                            in 3D modeling. This was a fun project to work on and I really enjoyed. I used some prefabs I found online of things that add detail to the scene like the food and some of the utensils.
-                            I also made a logo for the stall using Canva.
+                            <p>This was the product of all the lessons I've learned throughout the span of the whole multimedia II subject I took
+                            last 2nd semester of my 3rd year. I really enjoyed working on this project as it was my first time working with Blender3d and Canva for graphic design.
+                            This was a solo project and I was tasked to create a food stall design for a shawarma business. I worked on the 3d modeling of the food stall as well as the logo design and marketing materials.
                             </p>
-                            <div class="project-role"><strong>My Role:</strong> Designer, Modeler, Renderer</div>
+                            <div class="project-role"><strong>My Role:</strong> 3D Modeler, Marketing Designer</div>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Project 6: UTOPIA -->
                 <div class="project-card" data-category="multimedia" data-status="completed" data-date="2023">
-                        <div class="project-status-badge completed">Completed</div>
-                        <div class="project-carousel-wrapper">
-                            <img class="project-image" src="assets/UTOPIA.png" alt="UTOPIA Project">
-                            <button class="project-prev">&#8592;</button>
-                            <button class="project-next">&#8594;</button>
-                        </div>
-                        <div class="project-content">
-                            <h3>UTOPIA</h3>
-                            <div class="project-timeline">📅 2023</div>
-                            <p class="project-short-desc">2d Poster Art</p>
-                            <div class="project-tags">
-                                <span class="tag">Adobe Photoshop</span>
+                    <div class="project-status-badge completed">Completed</div>
+                    <div class="project-carousel-wrapper">
+                        <img class="project-image" src="assets/UTOPIA.png" alt="UTOPIA Project">
+                        <button class="project-prev">&#8592;</button>
+                        <button class="project-next">&#8594;</button>
+                        <div class="project-image-counter">1/1</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>UTOPIA</h3>
+                        <div class="project-timeline">📅 2024</div>
+                        <p class="project-short-desc">Poster Art</p>
+                        <div class="project-tags">
+                            <span class="tag">Adobe Photoshop</span>
                         </div>
                         <button class="expand-btn">Read More</button>
                         <div class="project-details">
-                            <p>This was a poster art I made for our Multimedia Arts I Subject, My main idea was to create a poster for Travis Scott
-                            since I really like his music and his aesthetic and has recently released a new album around that time. 
-                            I used a lot of different techniques in Photoshop to create this poster.
+                            <p>This was a poster art I made for our Multimedia Arts subject. This was a kind of a homage to Travis Scott's album that
+                                year named UTOPIA. I made this poster art using Adobe Photoshop and I really enjoyed working on this project as it was my first time
+                                working with Adobe Photoshop and I learned a lot of new techniques and skills that I can use for future projects.
                             </p>
-                            <div class="project-role"><strong>My Role:</strong> Designer, Modeler, Renderer</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Modal for enlarged image -->
-        <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-            <span id="modal-close" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; font-weight:bold;z-index:10001;">&times;</span>
+        <div id="imageEnlargeModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+            <span id="closeImageModalBtn" style="position:absolute; top:30px; right:50px; color:white; font-size:2.5rem; cursor:pointer; font-weight:bold;z-index:10001;">&times;</span>
             <div id="modal-img-container" style="display:flex; align-items:center; justify-content:center; width:100vw; height:100vh;">
-                <img id="modal-img" src="" alt="Enlarged Project" style="max-width:96vw; max-height:90vh; border-radius:12px; box-shadow:0 0 24px #000; display:block; margin:auto; z-index:10000;">
+                <img id="enlargedImage" src="" alt="Enlarged Project" style="max-width:96vw; max-height:90vh; border-radius:12px; box-shadow:0 0 24px #000; display:block; margin:auto; z-index:10000;">
             </div>
         </div>
         <script>
@@ -526,7 +527,7 @@
             ["assets/TrafficSlight/1.png", "assets/TrafficSlight/2.png"],
             ["assets/GigaBites/GigaBites.jpg", "assets/GigaBites/GigaBites2.jpg"],
             ["assets/Murendil/Murendil.png", "assets/Murendil/Murendil2.jpg"],
-            ["assets/ShawarmaSTOP/highlight-view.png", "assets/ShawarmaSTOP/front-view.png", "assets/ShawarmaSTOP/shawarmastop-menu.png", "assets/ShawarmaSTOP/shawarmastop-logo.png"],
+            ["assets/ShawarmaSTOP/front-view.png", "assets/ShawarmaSTOP/highlight-view.png", "assets/ShawarmaSTOP/shawarmastop-logo.png", "assets/ShawarmaSTOP/shawarmastop-menu.png"],
             ["assets/UTOPIA.png"]
         ];
 
@@ -582,10 +583,10 @@
             // Enlarge image on click
             img.addEventListener('click', function(e) {
                 e.stopPropagation();
-                const modal = document.getElementById('img-modal');
-                const modalImg = document.getElementById('modal-img');
-                modalImg.src = projectImages[idx][current];
-                modal.style.display = 'flex';
+                const imageModal = document.getElementById('imageEnlargeModal');
+                const enlargedImg = document.getElementById('enlargedImage');
+                enlargedImg.src = projectImages[idx][current];
+                imageModal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
             });
 
@@ -630,48 +631,75 @@
             });
         });
 
-        // Modal close logic
-        function closeModal() {
-            document.getElementById('img-modal').style.display = 'none';
-            document.getElementById('modal-img').src = '';
+        // Modal close logic for image enlarge
+        function closeImageModal() {
+            document.getElementById('imageEnlargeModal').style.display = 'none';
+            document.getElementById('enlargedImage').src = '';
             document.body.style.overflow = '';
         }
-        document.getElementById('modal-close').onclick = closeModal;
-        document.getElementById('img-modal').addEventListener('click', function(e) {
+        
+        document.getElementById('closeImageModalBtn').addEventListener('click', closeImageModal);
+        document.getElementById('imageEnlargeModal').addEventListener('click', function(e) {
             if (e.target === this) {
-                closeModal();
+                closeImageModal();
             }
         });
+        
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                const modal = document.getElementById('img-modal');
-                if (modal.style.display === 'flex') {
-                    closeModal();
-                } 
+                const imageModal = document.getElementById('imageEnlargeModal');
+                if (imageModal.style.display === 'flex') {
+                    closeImageModal();
+                }
             }
         });
         </script>
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with me! Lets connect!</p>
-            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
-            <a href="https://web.facebook.com/Aristotle.eXpress" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
-                <img src="assets/fbiaw.png" alt="Facebook" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
-                <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
-            </a>
-            <a href="mailto:aristotle.peteros@gmail.com" style="text-align: center; text-decoration: none; color: inherit;">
-                <img src="assets/4202011_email_gmail_mail_logo_social_icon.png" alt="Email" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
-                <div style="margin-top: 0.5rem;">aristotle.peteros@gmail.com</div>
-            </a>
-            <a href="https://www.linkedin.com/in/aristotle-peteros-6796242b4" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
-                <img src="assets/linkedin-icon-logo-png-transparent.png" alt="LinkedIn" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
-                <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
-            </a>
-            </div>
-        </section>
+  <h2>Contact</h2>
+  <p>Get in touch with me! Let's connect! I am open to collaborations — please email me, send me a DM, or use the form below!</p>
+
+  <!-- Social Links -->
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+    <a href="https://web.facebook.com/Aristotle.eXpress" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+      <img src="assets/fbiaw.png" alt="Facebook" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+      <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
+    </a>
+    <a href="mailto:aristotle.peteros@gmail.com" style="text-align: center; text-decoration: none; color: inherit;">
+      <img src="assets/4202011_email_gmail_mail_logo_social_icon.png" alt="Email" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+      <div style="margin-top: 0.5rem;">aristotle.peteros@gmail.com</div>
+    </a>
+    <a href="https://www.linkedin.com/in/aristotle-peteros-6796242b4" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+      <img src="assets/linkedin-icon-logo-png-transparent.png" alt="LinkedIn" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+      <div style="margin-top: 0.5rem;">Aristotle Peteros</div>
+    </a>
+    <a href="https://github.com/Totsickle" target="_blank" style="text-align: center; text-decoration: none; color: inherit;">
+      <img src="assets/github-mark.png" alt="GitHub" style="width: 60px; height: 60px; display: block; margin: 0 auto;">
+      <div style="margin-top: 0.5rem;">Totsickle</div>
+    </a>
+  </div>
+
+  <!-- Contact Form -->
+  <div style="max-width: 500px; margin: 3rem auto 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <h3 style="text-align: center;">Send Me a Message</h3>
+    <form action="https://formspree.io/f/xjkajgjw" method="POST" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+      <input type="text" name="name" placeholder="Your Name" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;">
+      <input type="email" name="_replyto" placeholder="Your Email" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;">
+      <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+      <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 0.75rem; border-radius: 8px; cursor: pointer;">Send Message</button>
+    </form>
+  </div>                                                
+
+  <!-- Download Resume -->
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="assets/Peteros, Aristotle - RESUME (1).pdf" target="_blank" download
+       style="background-color: #28a745; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
+      Download Resume
+    </a>
+  </div>
+</section>
     </main>
     <footer>
-        <p>&copy; 2025 Aristotle Peteros</p>
+        <p style="text-align: center;">&copy; 2025 Aristotle Peteros</p>
     </footer>
 </body>
 </html>
